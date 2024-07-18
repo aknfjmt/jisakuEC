@@ -1,0 +1,11 @@
+@if($like_model->like_exist(Auth::user()->id,$item->id))
+<p class="favorite-marke">
+  <a class="js-like-toggle loved" href="" data-postid="{{ $item->id }}"><i class="fas fa-heart"></i></a>
+  <span class="likesCount">{{$posts->likes_count}}</span>
+</p>
+@else
+<p class="favorite-marke">
+  <a class="js-like-toggle" href="" data-postid="{{ $item->id }}"><i class="fas fa-heart"></i></a>
+  <span class="likesCount"></span>
+</p>
+@endif​
